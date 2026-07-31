@@ -1,6 +1,7 @@
 from database import *
 from preprocessing import *
 from model import *
+from train import *
 
 def main():
     metadata = load_metadata()
@@ -11,7 +12,8 @@ def main():
 
     model = create_model()
     print(model)
-    
+
+    trained_model = train_model()
 
 if __name__ == "__main__":
     main()
