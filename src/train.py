@@ -1,9 +1,14 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 from preprocessing import load_metadata, create_dataloaders
 from model import create_model
+
+sns.set_style("darkgrid")
+plt.rcParams['figure.figsize'] = (12,6)
 
 def train_model():
     """Trains the ResNet-18 model using MRI image data."""
@@ -31,7 +36,7 @@ def train_model():
         lr=0.001
     )
 
-    num_epochs = 1
+    num_epochs = 5
 
     history = {
         "loss": []
@@ -69,6 +74,20 @@ def train_model():
         print(
             f"Epoch [{epoch+1}/{num_epochs}], Loss: {average_loss:.4f}"
         )
+
+    plt.plot(
+        range(1, num_epochs + 1),
+        history["loss"],
+        marker="o"
+    )
+    plt.title("Training Loss")
+    plt.xlabel("Epoch")
+    plt.ylabel("Loss")
+
+    plt.grid(True)
+    plt.tight_layout()
+
+    plt.savefig("images/training_loss.png", dpi=300)
 
     # Saves trained model weights for future evaluation and predictions.
     torch.save(model.state_dict(), "models/resnet18_brain_tumor.pth")

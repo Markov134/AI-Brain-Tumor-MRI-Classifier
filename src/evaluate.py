@@ -1,4 +1,6 @@
 import torch
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 from sklearn.metrics import (
     accuracy_score,
@@ -11,6 +13,8 @@ from sklearn.metrics import (
 
 from preprocessing import load_metadata, create_dataloaders
 from model import create_model
+
+sns.set_style("darkgrid")
 
 def evaluate_model():
     """Evaluate the trained ResNet-18 model."""
@@ -91,7 +95,25 @@ def evaluate_model():
 
     print("\nClassification Report:\n")
     print(classification_report(all_labels, all_predictions))
-        
+
+    plt.figure(figsize=(8, 6))
+
+    sns.heatmap(
+        matrix,
+        annot=True,
+        fmt="d",
+        cmap="Blues",
+        xticklabels=["Glioma", "Meningioma", "No Tumor", "Pituitary"],
+        yticklabels=["Glioma", "Meningioma", "No Tumor", "Pituitary"]
+    )
+
+    plt.xlabel("Predicted Label")
+    plt.ylabel("True Label")
+    plt.title("Confusion Matrix")
+
+    plt.tight_layout()
+    plt.savefig("images/confusion_matrix.png", dpi=300)
+            
 
 if __name__ == "__main__":
     evaluate_model()
