@@ -45,6 +45,14 @@ The dataset contains the following columns:
 - Seaborn
 - Jupyter Notebook
 - Power BI
+  
+## 📊 Data Visualizations
+
+### Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
+
+### Training Loss
+![Training Loss](images/training_loss.png)
 
 ## 📈 Model Performance
 
