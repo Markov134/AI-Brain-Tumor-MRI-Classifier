@@ -12,7 +12,6 @@ def main():
     cursor.execute("SELECT filepath FROM mri_images WHERE id = 3;")
     row = cursor.fetchone()
 
-    cursor.close()
     connection.close()
 
     predict_image(row[0])
