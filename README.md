@@ -65,6 +65,13 @@ The ResNet-18 model achieved the following results:
 | Recall | 92.44% |
 | F1 Score | 92.38% |
 
+## 🔍 Example Prediction
+
+The trained ResNet-18 model was used to classify an individual MRI image.
+
+**Prediction:** Glioma  
+**Confidence:** 100.00%
+
 ## 📊 Power BI Dashboard
 
 The project includes a Power BI dashboard containing:
