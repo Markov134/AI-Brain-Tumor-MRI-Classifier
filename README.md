@@ -85,16 +85,15 @@ MRI-Brain-Scan-Project
 │   ├── 03_preprocessing_and_training.ipynb
 │   └── 04_model_results.ipynb
 │
-├── src\
-│   ├── database.py\
-│   ├── preprocessing.py\
-│   ├── model.py\
-│   └── predict.py\
-│\
-├── dashboard\
-│   └── MRI_Brain_Tumor_Dashboard.pbix\
-│\
-|\
-├── README.md\
+├── src
+│   ├── database.py
+│   ├── preprocessing.py
+│   ├── model.py
+│   └── predict.py
+│
+├── dashboard
+│   └── MRI_Brain_Tumor_Dashboard.pbix
+|
+├── README.md
 └── .gitignore
 ```
