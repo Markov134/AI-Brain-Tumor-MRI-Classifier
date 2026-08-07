@@ -121,9 +121,9 @@ The project includes a Power BI dashboard containing:
 
 ## Repository Structure
 
-MRI-Brain-Scan-Project
-│
-├── images
+MRI-Brain-Scan-Project\
+│\
+├── images\
 │   ├── confusion_matrix.png
 │   ├── training_loss.png
 │   └── sample_mri_images.png
