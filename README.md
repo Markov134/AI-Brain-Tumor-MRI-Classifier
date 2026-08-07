@@ -72,19 +72,19 @@ The project includes a Power BI dashboard containing:
 ## 📁 Project Structure
 
 ```
-MRI-Brain-Scan-Project\
-│\
-├── images\
-│   ├── confusion_matrix.png\
-│   ├── training_loss.png\
-│   └── sample_mri_images.png\
-│\
-├── notebooks\
-│   ├── 01_database_creation.ipynb\
-│   ├── 02_eda.ipynb\
-│   ├── 03_preprocessing_and_training.ipynb\
-│   └── 04_model_results.ipynb\
-│\
+MRI-Brain-Scan-Project
+│
+├── images
+│   ├── confusion_matrix.png
+│   ├── training_loss.png
+│   └── sample_mri_images.png
+│
+├── notebooks
+│   ├── 01_database_creation.ipynb
+│   ├── 02_eda.ipynb
+│   ├── 03_preprocessing_and_training.ipynb
+│   └── 04_model_results.ipynb
+│
 ├── src\
 │   ├── database.py\
 │   ├── preprocessing.py\
