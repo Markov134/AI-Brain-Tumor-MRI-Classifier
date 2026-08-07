@@ -72,6 +72,8 @@ The trained ResNet-18 model was used to classify an individual MRI image.
 **Prediction:** Glioma  
 **Confidence:** 100.00%
 
+![Example Prediction](images/Te-gl_100.jpg)
+
 ## 📊 Power BI Dashboard
 
 The project includes a Power BI dashboard containing:
