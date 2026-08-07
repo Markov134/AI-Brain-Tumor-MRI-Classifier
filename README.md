@@ -4,7 +4,7 @@ Deep Learning + Computer Vision + MRI Image Classification + AI Model Developmen
 
 ## 📚 Dataset Source
 
-The **Brain Tumor MRI Dataset** was sourced from Kaggle.
+The **Brain Tumor MRI Dataset** was sourced from Kaggle and is licensed under the **CC BY 4.0** license.
 
 Due to the size of the dataset, the raw MRI images are not included in this repository.
 
