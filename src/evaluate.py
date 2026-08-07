@@ -1,6 +1,7 @@
 import torch
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 from sklearn.metrics import (
     accuracy_score,
@@ -112,7 +113,13 @@ def evaluate_model():
     plt.title("Confusion Matrix")
 
     plt.tight_layout()
-    plt.savefig("images/confusion_matrix.png", dpi=300)
+    image_path = "images/confusion_matrix.png"
+
+    if os.path.exists(image_path):
+        print("Image already exists. Skipping save.")
+    else:
+        plt.savefig(image_path, bbox_inches="tight")
+        print("Image saved.")
             
 
 if __name__ == "__main__":

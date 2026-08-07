@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 from preprocessing import load_metadata, create_dataloaders
 from model import create_model
@@ -87,10 +88,22 @@ def train_model():
     plt.grid(True)
     plt.tight_layout()
 
-    plt.savefig("images/training_loss.png", dpi=300)
+    image_path = "images/training_loss.png"
 
-    # Saves trained model weights for future evaluation and predictions.
-    torch.save(model.state_dict(), "models/resnet18_brain_tumor.pth")
+    if os.path.exists(image_path):
+        print("Image already exists. Skipping save.")
+    else:
+        plt.savefig(image_path, bbox_inches="tight")
+        print("Image saved.")
+
+    model_path = "models/resnet18_brain_tumor.pth"
+
+    if os.path.exists(model_path):
+        print("Model already exists. Skipping save.")
+    else:
+        # Saves trained model weights for future evaluation and predictions.
+        torch.save(model.state_dict(), "models/resnet18_brain_tumor.pth")
+        print("Model Saved.")
 
 if __name__ == "__main__":
     train_model()
