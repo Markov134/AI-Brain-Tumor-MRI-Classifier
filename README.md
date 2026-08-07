@@ -2,7 +2,13 @@
 
 Deep Learning + Computer Vision + MRI Image Classification + AI Model Development + SQL
 
-This project uses the **Brain Tumor MRI Dataset**, sourced from Kaggle. 
+## 📚 Dataset Source
+
+The **Brain Tumor MRI Dataset** was sourced from Kaggle.
+
+Due to the size of the dataset, the raw MRI images are not included in this repository.
+
+[View the dataset on Kaggle](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
 ## 🧠 Project Overview
 
@@ -114,3 +120,7 @@ MRI-Brain-Scan-Project
 ├── README.md
 └── .gitignore
 ```
+
+## 📝 Conclusion
+
+The ResNet-18 model successfully classified brain MRI images into four categories: Glioma, Meningioma, No Tumor, and Pituitary. The model achieved an accuracy of 92.44%, demonstrating strong classification performance on the test dataset.
